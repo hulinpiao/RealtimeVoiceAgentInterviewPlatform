@@ -1,18 +1,18 @@
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Button } from "@/components/ui/button"
-import { Form } from "@/components/ui/form"
-import Image from "next/image"
-import Link from "next/link"
-import { toast } from "sonner"
-import FormField from "./FormField"
-import { useRouter } from "next/navigation"
-import { auth } from "@/firebase/client"
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
-import { signin, signup } from "../lib/actions/auth.action"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import Image from "next/image";
+import Link from "next/link";
+import { toast } from "sonner";
+import FormField from "./FormField";
+import { useRouter } from "next/navigation";
+import { auth } from "../firebase/client";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { signin, signup } from "../lib/actions/auth.action";
 
 const authFormSchema = (type: FormType) => {
   return z.object({
