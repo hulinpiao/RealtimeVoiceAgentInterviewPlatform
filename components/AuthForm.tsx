@@ -10,7 +10,7 @@ import Link from "next/link";
 import { toast } from "sonner";
 import FormField from "./FormField";
 import { useRouter } from "next/navigation";
-import { auth } from "../firebase/client";
+import { auth } from "@/firebase/client";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { signin, signup } from "../lib/actions/auth.action";
 
